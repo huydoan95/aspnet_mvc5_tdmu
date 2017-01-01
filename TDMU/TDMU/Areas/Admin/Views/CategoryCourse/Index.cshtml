@@ -1,0 +1,91 @@
+﻿@model List<Model.EF.CategoryCourse>
+@{
+    ViewBag.Title = "Loại tin";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<!--breadcrumbs start-->
+<div id="breadcrumbs-wrapper" class=" grey lighten-3">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <h5 class="breadcrumbs-title">Danh sách loại khóa học</h5>
+                <ol class="breadcrumb">
+                    <li><a href="/Admin/Home">Trang chủ</a></li>
+                    <li><a href="/Admin/CategoryCourse">Loại khóa học</a></li>
+                    <li class="active">Danh sách loại khóa học</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<!--breadcrumbs end-->
+<!--start container-->
+@section jsFooter{
+    <script type="text/javascript">
+        $(function () {
+        $("#example1").DataTable();
+        $('#example2').DataTable({
+          "paging": true,
+          "lengthChange": false,
+          "searching": false,
+          "ordering": true,
+          "info": true,
+          "autoWidth": false
+        });
+      });
+    </script>
+}
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">Danh sách loại khóa học</h3>
+            </div><!-- /.box-header -->
+            <div class="box-body">
+                <table id="example1" class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Tên</th>
+                            <th>Thời gian</th>
+                            <th>Sửa</th>
+                            <th>Xóa</th>
+                        </tr>
+                    </thead>
+
+                    <tfoot>
+                        <tr>
+                            <th>Tên</th>
+                            <th>Thời gian</th>
+                            <th>Sửa</th>
+                            <th>Xóa</th>
+                        </tr>
+                    </tfoot>
+
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr id="row_@item.ID">
+                                <td>@item.Name</td>
+                                <td>@item.Date</td>
+                                <td><a href="/Admin/CategoryCourse/Edit/@item.ID">Sửa</a></td>
+                                <td>
+                                    @Ajax.ActionLink("Xóa", "Delete", new { @id = item.ID }, new AjaxOptions
+                               {
+                                   Confirm = "Bạn có muốn xóa danh mục này?",
+                                   OnComplete = "$('#row_" + @item.ID + "').remove()",
+                                   HttpMethod = "Delete"
+                               })
+                                </td>
+                            </tr>
+                        }
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+

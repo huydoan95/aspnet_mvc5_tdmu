@@ -1,0 +1,35 @@
+﻿@model List<Model.EF.News>
+
+<section>
+    <div class="section-title">
+        <h4><a href="/event" style="color:#B1273E;">Events</a></h4>
+        <div class="custom-navigation">
+            <a href="#" class="flex-prev"><i class="fa fa-2x fa-angle-left"></i></a>
+            <a href="#" class="flex-next"><i class="fa fa-2x fa-angle-right"></i></a>
+        </div>
+    </div>
+
+    <div class="a-slider flexslider">
+        <ul class="slides">
+            @foreach (var item in Model)
+            {
+                var url = "/event/" + item.Url + ".html";
+                <li>
+                    <div class="a-item">
+                        <a href="@url" class="a-img" title="@item.Name">
+                            <img src="@item.Image" alt="@item.Name" style="max-height:140px;" />
+                        </a>
+                        <div class="a-info">
+                            <h4><a href="@url" title="@item.Name">@item.Name</a></h4>
+                            <p class="post-title-an" style="text-align: justify;">
+                                @Html.Raw(@item.Description)
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            }
+
+        </ul>
+    </div>
+</section>
+

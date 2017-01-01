@@ -1,0 +1,68 @@
+﻿@model Model.EF.CategoryCourse
+@{
+    ViewBag.Title = "Thay đổi thông tin loại tin tức";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div id="breadcrumbs-wrapper" class=" grey lighten-3">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <h5 class="breadcrumbs-title">Loại khóa học</h5>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="/Admin/Home">Trang chủ</a>
+                    </li>
+                    <li>
+                        <a href="/Admin/CategoryCourse">Loại khóa học</a>
+                    </li>
+                    <li class="active">Thêm loại khóa học</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section jsFooter{
+
+}
+<div class="box box-default">
+    @using (Html.BeginForm("Edit", "CategoryCourse", FormMethod.Post, new { @class = "col s12" }))
+    {
+        @Html.AntiForgeryToken()
+
+
+        <div class="box-header with-border">
+            <h3 class="box-title">Sửa loại khóa học</h3>
+        </div>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="box-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Tên loại : </label>
+                        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <button type="submit" name="action" class="btn btn-success">
+                            Cập nhật
+                            <i class="mdi-content-send right"></i>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+

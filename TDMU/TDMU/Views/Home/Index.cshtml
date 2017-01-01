@@ -1,0 +1,73 @@
+﻿@model List<Model.EF.News>
+@{
+    ViewBag.Title = "Thu Dau Mot University";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Menu{
+    <li><a href="/home" class="active" title="Home">home</a></li>
+	<li><a href="/about" title="About">About us</a></li>
+    <li><a href="/news" title="News">news</a></li>
+    <li><a href="/trainingologies" title="TRAINING OLOGIES">TRAINING OLOGIES</a></li>
+    <li><a href="/cdio" title="CDIO">CDIO</a></li>
+    <li><a href="/contact" title="Contact">contact</a></li>
+}
+
+@section Slide{
+    @{ Html.RenderAction("Slide", "Home");}
+}
+<!--Event-->
+@{ Html.RenderAction("Events", "Home");}
+<!--Event./-->
+<!--news-->
+@{ Html.RenderAction("LastNews", "Home");}
+<!--news./-->
+<!--blog./-->
+@{ Html.RenderAction("LastBlogs", "Home");}
+<!--blog./-->
+<!--work/-->
+ @{ Html.RenderAction("Work", "Home");}
+
+@section SlidePhoto{
+    @{ Html.RenderAction("SlidePhoto", "Photo");}
+    
+}
+<!--work./-->
+<!--courses-->
+<section>
+    <div class="section-title">
+        <h4><a href="/calendar" title="Work schedule" style="color:#B1273E;">Work schedule</a></h4>
+    </div>
+
+    <div class="row courses-container">
+        @foreach (var item in Model)
+        {
+            var url = "/calendar/" + item.Url + ".html";
+            <div class="course-item col-xs-12 col-sm-6 col-md-4 col-lg-4">
+
+                <a href="@url">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="course-img">
+                            <img alt="@item.Name" src="@item.Image" />
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="course-info">
+                            <div class="table-cont">
+                                <div class="table-cell">
+                                    <h5>@item.Name</h5>
+                                    @*<div class="course-line"></div>
+                                    <p style="text-align: justify;">
+                                        @item.Description
+                                    </p>*@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+
+    </div>
+</section>
+
+<!--courses./-->

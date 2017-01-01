@@ -1,0 +1,39 @@
+C:\Users\Nam Phuong\Documents\Visual Studio 2015\Projects\TDMU\Model\bin\Debug\Model.dll.config
+C:\Users\Nam Phuong\Documents\Visual Studio 2015\Projects\TDMU\Model\bin\Debug\Model.dll
+C:\Users\Nam Phuong\Documents\Visual Studio 2015\Projects\TDMU\Model\bin\Debug\Model.pdb
+C:\Users\Nam Phuong\Documents\Visual Studio 2015\Projects\TDMU\Model\bin\Debug\EntityFramework.dll
+C:\Users\Nam Phuong\Documents\Visual Studio 2015\Projects\TDMU\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Nam Phuong\Documents\Visual Studio 2015\Projects\TDMU\Model\bin\Debug\EntityFramework.xml
+C:\Users\Nam Phuong\Documents\Visual Studio 2015\Projects\TDMU\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Nam Phuong\Documents\Visual Studio 2015\Projects\TDMU\Model\obj\Debug\Model.dll
+C:\Users\Nam Phuong\Documents\Visual Studio 2015\Projects\TDMU\Model\obj\Debug\Model.pdb
+C:\Users\Nam Phuong\Documents\Visual Studio 2015\Projects\TDMU\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\SKYNET\Desktop\TDMU\Model\bin\Debug\Model.dll.config
+C:\Users\SKYNET\Desktop\TDMU\Model\bin\Debug\Model.dll
+C:\Users\SKYNET\Desktop\TDMU\Model\bin\Debug\Model.pdb
+C:\Users\SKYNET\Desktop\TDMU\Model\bin\Debug\EntityFramework.dll
+C:\Users\SKYNET\Desktop\TDMU\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\SKYNET\Desktop\TDMU\Model\bin\Debug\EntityFramework.xml
+C:\Users\SKYNET\Desktop\TDMU\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\SKYNET\Desktop\TDMU\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\SKYNET\Desktop\TDMU\Model\obj\Debug\Model.dll
+C:\Users\SKYNET\Desktop\TDMU\Model\obj\Debug\Model.pdb
+D:\PS\WEBTRUONG\TDMU\TDMU\Model\bin\Debug\Model.dll.config
+D:\PS\WEBTRUONG\TDMU\TDMU\Model\bin\Debug\Model.dll
+D:\PS\WEBTRUONG\TDMU\TDMU\Model\bin\Debug\Model.pdb
+D:\PS\WEBTRUONG\TDMU\TDMU\Model\bin\Debug\EntityFramework.dll
+D:\PS\WEBTRUONG\TDMU\TDMU\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\PS\WEBTRUONG\TDMU\TDMU\Model\bin\Debug\EntityFramework.xml
+D:\PS\WEBTRUONG\TDMU\TDMU\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\PS\WEBTRUONG\TDMU\TDMU\Model\obj\Debug\Model.dll
+D:\PS\WEBTRUONG\TDMU\TDMU\Model\obj\Debug\Model.pdb
+E:\Specialized documents\Website\ASP.NET\TDMU\Model\bin\Debug\Model.dll.config
+E:\Specialized documents\Website\ASP.NET\TDMU\Model\bin\Debug\Model.dll
+E:\Specialized documents\Website\ASP.NET\TDMU\Model\bin\Debug\Model.pdb
+E:\Specialized documents\Website\ASP.NET\TDMU\Model\bin\Debug\EntityFramework.dll
+E:\Specialized documents\Website\ASP.NET\TDMU\Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\Specialized documents\Website\ASP.NET\TDMU\Model\bin\Debug\EntityFramework.xml
+E:\Specialized documents\Website\ASP.NET\TDMU\Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\Specialized documents\Website\ASP.NET\TDMU\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+E:\Specialized documents\Website\ASP.NET\TDMU\Model\obj\Debug\Model.dll
+E:\Specialized documents\Website\ASP.NET\TDMU\Model\obj\Debug\Model.pdb

@@ -1,0 +1,48 @@
+﻿@model Model.EF.News
+@{
+    ViewBag.Title = Model.Title + " - THU DAU MOT UNIVERSITY";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Menu{
+    <li><a href="/home" title="Home">home</a></li>
+	<li><a href="/about" title="About">About us</a></li>
+    <li><a href="/news" class="active" title="News">news</a></li>
+    <li><a href="/trainingologies" title="TRAINING OLOGIES">TRAINING OLOGIES</a></li>
+    <li><a href="/cdio" title="CDIO">CDIO</a></li>
+    <li><a href="/contact" title="Contact">contact</a></li>
+}
+@section Slide{
+    <div class="page-desc-wrapper">
+        <div class="container">
+            <div class="page-desc">
+                <h3>News</h3>
+                <ol class="breadcrumb">
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/news">News</a></li>
+                    <li class="active">@Model.Name</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+}
+
+@*@section UpEventsandPhoto{
+    @{ Html.RenderAction("UpEvents", "Home");}
+    @{ Html.RenderAction("SlidePhoto", "Photo");}
+}*@
+<div class="content">
+    <div class="content-info">
+        <h3>@Model.Name</h3>
+        <span>By @Model.CreateBy Posted @Model.Date</span>
+        <span class="quota" style="text-align: justify;">
+            @Html.Raw(@Model.Description)
+        </span>
+        @*<img src="http://loremflickr.com/1280/720/city,building,maplestory,flower,natural,rain?random=1" />*@
+    </div>
+<style> .main-content img{ height: auto !important; width: 100% !important; } </style>
+    <div class="main-content" style="text-align: justify;">
+        @Html.Raw(Model.Detail)
+    </div>
+</div>
+
+

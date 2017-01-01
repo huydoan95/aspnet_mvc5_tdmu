@@ -1,0 +1,163 @@
+﻿@model Model.EF.Slide
+@{
+    ViewBag.Title = "Thêm Slide";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div id="breadcrumbs-wrapper" class=" grey lighten-3">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <h5 class="breadcrumbs-title">Slide</h5>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="/trang-quan-ly">Trang chủ</a>
+                    </li>
+                    <li>
+                        <a href="/quan-ly-slide">Slide</a>
+                    </li>
+                    <li class="active">Thêm Slide</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section jsFooter{
+    <script>
+        $('#btnSelectImage').on('click', function (e) {
+            e.preventDefault();
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (url) {
+                $('#txtImage').val(url);
+            };
+            finder.popup();
+        });
+
+        $('#btnSelectImage2').on('click', function (e) {
+            e.preventDefault();
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (url) {
+                $('#txtImage2').val(url);
+            };
+            finder.popup();
+        });
+
+        var editor = CKEDITOR.replace('detail', {
+            customConfig: '/Content/Admin/ckeditor/config.js'
+        });
+    </script>
+
+}
+<div class="box box-default">
+    @using (Html.BeginForm("Create", "Slide", FormMethod.Post, new { @class = "col s12" }))
+    {
+        @Html.AntiForgeryToken()
+
+
+        <div class="box-header with-border">
+            <h3 class="box-title">Thêm slide mới</h3>
+        </div>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="box-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Tên slide: </label>
+                        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Giới thiệu: </label>
+                        @Html.TextAreaFor(model => model.Description, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Nội dung: </label>
+                        @Html.TextAreaFor(model => model.Detail, new { @class = "form-control", id = "detail" })
+                        @Html.ValidationMessageFor(model => model.Detail, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Title: </label>
+                        @Html.TextBoxFor(model => model.Title, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Mô tả trên Google: </label>
+                        @Html.TextAreaFor(model => model.Description_google, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Description_google, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Tag (Các Tag cách nhau bởi dấu ","): </label>
+                        @Html.TextBoxFor(model => model.Keyword, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Keyword, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Hình đại diện: </label>
+                        @Html.TextBoxFor(model => model.Image, new { @class = "form-control", id = "txtImage" })
+                        <a id="btnSelectImage" href="#">Chọn ảnh</a>
+                        @Html.ValidationMessageFor(model => model.Image, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Hình lazyload: </label>
+                        @Html.TextBoxFor(model => model.ImageLoad, new { @class = "form-control", id = "txtImage2" })
+                        <a id="btnSelectImage2" href="#">Chọn ảnh</a>
+                        @Html.ValidationMessageFor(model => model.ImageLoad, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <button type="submit" name="action" class="btn btn-success">
+                            Tạo mới
+                            <i class="mdi-content-send right"></i>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+

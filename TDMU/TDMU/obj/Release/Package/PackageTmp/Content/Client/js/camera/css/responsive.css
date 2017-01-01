@@ -1,0 +1,58 @@
+﻿a:hover {
+                text-decoration: none;
+            }
+
+            #back_to_camera {
+                clear: both;
+                display: block;
+                height: 80px;
+                line-height: 40px;
+                padding: 20px;
+            }
+
+            .fluid_container {
+                margin: 0 auto;
+                width: 100%;
+                height: auto;
+            }
+
+            .camera_thumb {
+                width: 120px !important;
+                height: 70px !important;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+
+            #back_to_camera {
+                clear: both;
+                display: block;
+                height: 80px;
+                line-height: 40px;
+                padding: 20px;
+            }
+
+            .fluid_container {
+                margin: 0 auto;
+                max-width: 1200px;
+                width: 100%;
+            }
+            .camera_thumbs_cont div ul{
+                width: 100% !important;
+            }
+            .camera_command_wrap {
+                background: rgba(148, 146, 146, 0.19);
+            }
+            .slidebanner {
+                width: 100%;
+                max-width: 1000px;
+                height: 500px;
+                max-height: 720px;
+                margin: 0px auto;
+            }
+@media only screen and (max-width: 1000px){
+
+}

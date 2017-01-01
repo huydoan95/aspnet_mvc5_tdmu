@@ -1,0 +1,112 @@
+﻿
+@{
+    ViewBag.Title = "Training Ologies - Thu Dau Mot University";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Menu{
+    <li><a href="/home" title="Home">home</a></li>
+    <li><a href="/about" title="About">About us</a></li>
+    <li><a href="/news" title="News">news</a></li>
+    <li><a href="/trainingologies" class="active" title="TRAINING OLOGIES">TRAINING OLOGIES</a></li>
+    <li><a href="/cdio" title="CDIO">CDIO</a></li>
+    <li><a href="/contact" title="Contact">contact</a></li>
+}
+@section Slide{
+    <div class="page-desc-wrapper">
+        <div class="container">
+            <div class="page-desc">
+                <h3>TRAINING OLOGIES</h3>
+                <ol class="breadcrumb">
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/cdio">TRAINING OLOGIES</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+}
+
+
+<div id="training-parent" style=" width: 66%; margin: 0px auto;">
+    <div id="training-child-main" style="position: relative; float:left;">
+        <img src="/Content/Client/images/TrainingOlogies/TDMU-EN-01-500.png" style="width: 100%; height: 100%; position: relative;" />
+        <div id="postgraduate" class="act tab" style="opacity: 1; cursor: pointer; width: 22.6%; height: 16.5%; transform: rotate(45deg);  background: #D2B52A; z-index: 10; position: absolute; left: 21.95%; top: 35%; transition: .2s ease-in-out .1s; ">
+            <p style="transform: rotate(-45deg); color: white; font-weight: 400; margin-top: 25%; font-size: 16px; text-align: center; margin-left: 10%;"> Postgradute System's Ologies </p>
+        </div>
+        <div id="regular" class="tab" style="opacity: 0; cursor: pointer; width: 22.6%; height: 16.5%; transform: rotate(45deg); border: 3px solid #C906CC; background: #1B97D4; z-index: 10; position: absolute; left: 55.59%; top: 35.2%; transition: .2s ease-in-out .1s; ">
+            <p style="transform: rotate(-45deg); color: white; font-weight: 400; margin-top: 25%; font-size: 16px; text-align: center; margin-left: 10%;"> Regular University System </p>
+        </div>
+        <div id="alliance" class="tab" style="opacity: 0; cursor: pointer; width: 22.6%; height: 16.5%; transform: rotate(45deg); border: 3px solid #C906CC; background: #4BB964; z-index: 10; position: absolute; left: 21.9%; top: 58.86%; transition: .2s ease-in-out .1s; ">
+            <p style="transform: rotate(-45deg); color: white; font-weight: 400; margin-top: 25%; font-size: 16px; text-align: center; margin-left: 10%;"> Alliance University System </p>
+        </div>
+        <div id="college" class="tab" style="opacity: 0; cursor: pointer; width: 22.6%; height: 16.5%; transform: rotate(45deg); border: 3px solid #C906CC; background: #D52027; z-index: 10; position: absolute; left: 55.6%; top: 58.77%; transition: .2s ease-in-out .1s; ">
+            <p style="transform: rotate(-45deg); color: white; font-weight: 400; margin-top: 25%; font-size: 16px; text-align: center; margin-left: 10%;"> College System </p>
+        </div>
+    </div>
+
+    <div id="training-child-yellow" style="display: block; transition: .5s ease-in-out .3s;">
+        <img src="/Content/Client/images/TrainingOlogies/TDMU-EN-02-500.png" />
+    </div>
+    <div id="training-child-blue" style="display: block; transition: .5s ease-in-out .3s;">
+        <img src="/Content/Client/images/TrainingOlogies/TDMU-EN-03-500.png" />
+    </div>
+    <div id="training-child-green" style="display: block; transition: .5s ease-in-out .3s;">
+        <img src="/Content/Client/images/TrainingOlogies/TDMU-EN-04-500.png" />
+    </div>
+    <div id="training-child-red" style="display: block; transition: .5s ease-in-out .3s;">
+        <img src="/Content/Client/images/TrainingOlogies/TDMU-EN-05-500.png" />
+    </div>
+</div>
+@section jsFooter{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            
+
+            $('#postgraduate').click(function () {
+                $('body').animate({
+                    scrollTop: 800
+                }, 500);
+                $(this).css('opacity', '1');
+                $('#regular').css('opacity', '0');
+                $('#alliance').css('opacity', '0');
+                $('#college').css('opacity', '0');
+                $('.tab').removeClass('act');
+                $(this).addClass('act');
+            });
+            $('#regular').click(function () {
+                $('body').animate({
+                    scrollTop: $("#training-child-blue").offset().top
+                }, 500);
+                $(this).css('opacity', '1');
+                $('#postgraduate').css('opacity', '0');
+                $('#alliance').css('opacity', '0');
+                $('#college').css('opacity', '0');
+                $('.tab').removeClass('act');
+                $(this).addClass('act');
+            });
+            $('#alliance').click(function () {
+                $('body').animate({
+                    scrollTop: $("#training-child-green").offset().top
+                }, 500);
+                $(this).css('opacity', '1');
+                $('#regular').css('opacity', '0');
+                $('#postgraduate').css('opacity', '0');
+                $('#college').css('opacity', '0');
+                $('.tab').removeClass('act');
+                $(this).addClass('act');
+            });
+            $('#college').click(function () {
+                $('body').animate({
+                    scrollTop: $("#training-child-red").offset().top
+                }, 500);
+                $(this).css('opacity', '1');
+                $('#regular').css('opacity', '0');
+                $('#alliance').css('opacity', '0');
+                $('#postgraduate').css('opacity', '0');
+                $('.tab').removeClass('act');
+                $(this).addClass('act');
+            });
+        });
+    </script>
+}
+

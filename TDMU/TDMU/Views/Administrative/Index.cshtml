@@ -1,0 +1,92 @@
+﻿@model List<Model.EF.News>
+@{
+    ViewBag.Title = "administrative" + " - THU DAU MOT UNIVERSITY";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Menu{
+    <li><a href="/home" title="Home">home</a></li>
+	<li><a href="/about" title="About">About us</a></li>
+    <li><a href="/news" title="News">news</a></li>
+    <li><a href="/trainingologies" title="TRAINING OLOGIES">TRAINING OLOGIES</a></li>
+    <li><a href="/cdio" title="CDIO">CDIO</a></li>
+    <li><a href="/contact" title="Contact">contact</a></li>
+}
+
+<section>
+    <div class="section-title">
+        <h4><a href="/administrative">All ADMINISTRATIVE OFFICES</a></h4>
+    </div>
+</section>
+<div class="sep-30"></div>
+<section id="news">
+    <div class="jplist-ios-button">
+        <i class="fa fa-sort"></i>
+        Trang
+    </div>
+    <div class="row list">
+        @foreach (var item in Model)
+        {
+            var url = "/administrative/" + item.Url + ".html";
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 list-item">
+                <div class="post post-md post-hoz ">
+                    <div class="post-img">
+                        <img alt="@item.Name" src="@item.Image" />
+                    </div>
+                    <div class="post-info">
+                        <h4><a href="@url" title="@item.Name" @*class="post-title"*@>@item.Name</a></h4>
+                        <p class="post-tag">
+                            <span><i class="fa fa-clock-o"></i> @item.Date <i class="fa fa-user"></i> @item.CreateBy <i class="fa fa-tags"></i> @item.Keyword</span>
+                        </p>
+                        <div class="post-desc" style="text-align: justify;">@Html.Raw(@item.Description)</div>
+
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="jplist-panel box panel-top">
+
+                <div class="jplist-drop-down"
+                     data-control-type="items-per-page-drop-down"
+                     data-control-name="paging"
+                     data-control-action="paging">
+
+                    <ul>
+                        @{ Html.RenderAction("Index", "Items");}
+                    </ul>
+                </div>
+
+                <div class="jplist-label"
+                     data-type="Page {current} of {pages}"
+                     data-control-type="pagination-info"
+                     data-control-name="paging"
+                     data-control-action="paging">
+                </div>
+
+                <div class="jplist-pagination"
+                     data-control-type="pagination"
+                     data-control-name="paging"
+                     data-control-action="paging">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+@section jsFooter{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#news').jplist({
+                itemsBox: '.list'
+                     , itemPath: '.list-item'
+                     , panelPath: '.jplist-panel'
+            });
+
+            
+        });
+    </script>
+}
+

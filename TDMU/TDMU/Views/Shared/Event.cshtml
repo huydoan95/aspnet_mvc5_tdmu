@@ -1,0 +1,68 @@
+﻿@model List<Model.EF.News>
+@{
+    Model.EF.News first = ViewBag.FirstEvent;
+}
+<div class="col-xs-12 col-sm-6 col-md-12 col-lg-12">
+    <section>
+        <div class="section-title">
+            <h4><a href="/upevent" style="color:#B1273E;">upcoming events</a></h4>
+        </div>
+
+        <ul class="event-list">
+            <li>
+                <div class="post post-lg">
+                    <div class="post-img" style="height: 230px;">
+                        <img alt="@first.Name" src="@first.Image" />
+                        <div class="post-tag" style="margin-top:15px;">
+                            <span><i class="fa fa-calendar"></i> @first.Date <i class="fa fa-user"></i> @first.CreateBy </span>
+                        </div>
+                        @*<div class="overlay bg-blue">
+                            <div class="table-cont">
+                                <div class="table-cell">
+                                    <p>
+                                        <h2>05</h2>
+                                        <h4>
+                                            September<br />
+                                            2016<br /><br />
+                                        </h4>
+                                        7:30am<br />
+                                        -<br />
+                                        8:40:pm
+                                    </p>
+                                </div>
+                            </div>
+                        </div>*@
+                    </div>
+                    @{ var url = "/upevent/" + first.Url + ".html";}
+                    <div class="post-info">
+                        <h4><a href="@url" title="@first.Name">@first.Name </a></h4>
+                        <p class="post-desc" style="text-align: justify;">@first.Description</p>
+                    </div>
+                </div>
+            </li>
+
+            @foreach (var item in Model)
+            {
+                var url2 = "/upevent/" + item.Url + ".html";
+                <li>
+                    <div class="post post-sm post-hoz">
+                        <div class="post-img bg-blue">
+                            <div class="table-cont">
+                                <div class="table-cell">
+                                    <img alt="@item.Name" src="@item.Image" style="max-height:100px;" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-info">
+                            <h4><a href="@url2" title="@item.Name" class="post-title">@item.Name </a></h4>
+                            <div class="post-tag" style="margin-top:15px;">
+                                <span><i class="fa fa-calendar"></i> @item.Date <i class="fa fa-user"></i> @item.CreateBy </span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            }
+
+        </ul>
+    </section>
+</div>

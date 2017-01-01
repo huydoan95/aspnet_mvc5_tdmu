@@ -1,0 +1,95 @@
+﻿@model Model.EF.Photo
+@{
+    ViewBag.Title = "Sửa hình ảnh";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div id="breadcrumbs-wrapper" class=" grey lighten-3">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <h5 class="breadcrumbs-title">Hình ảnh</h5>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="/Admin/Home">Trang chủ</a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Photo">Hình ảnh</a>
+                    </li>
+                    <li class="active">Thêm hình ảnh</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section jsFooter{
+    <script>
+        $('#btnSelectImage').on('click', function (e) {
+            e.preventDefault();
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (url) {
+                $('#txtImage').val(url);
+            };
+            finder.popup();
+        });
+
+        var editor = CKEDITOR.replace('detail', {
+            customConfig: '/Content/Admin/ckeditor/config.js'
+        });
+    </script>
+
+}
+<div class="box box-default">
+    @using (Html.BeginForm("Edit", "Photo", FormMethod.Post, new { @class = "col s12" }))
+    {
+        @Html.AntiForgeryToken()
+
+
+        <div class="box-header with-border">
+            <h3 class="box-title">Sửa hình ảnh</h3>
+        </div>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="box-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Tên hình: </label>
+                        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Hình đại diện: </label>
+                        @Html.TextBoxFor(model => model.Image, new { @class = "form-control", id = "txtImage" })
+                        <a id="btnSelectImage" href="#">Chọn ảnh</a>
+                        @Html.ValidationMessageFor(model => model.Image, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <button type="submit" name="action" class="btn btn-success">
+                            Cập nhật
+                            <i class="mdi-content-send right"></i>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+
+

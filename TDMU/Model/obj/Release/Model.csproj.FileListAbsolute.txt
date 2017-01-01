@@ -1,0 +1,29 @@
+C:\Users\Nam Phuong\Documents\Visual Studio 2015\Projects\TDMU\Model\bin\Release\Model.dll.config
+C:\Users\Nam Phuong\Documents\Visual Studio 2015\Projects\TDMU\Model\bin\Release\Model.dll
+C:\Users\Nam Phuong\Documents\Visual Studio 2015\Projects\TDMU\Model\bin\Release\Model.pdb
+C:\Users\Nam Phuong\Documents\Visual Studio 2015\Projects\TDMU\Model\bin\Release\EntityFramework.dll
+C:\Users\Nam Phuong\Documents\Visual Studio 2015\Projects\TDMU\Model\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Nam Phuong\Documents\Visual Studio 2015\Projects\TDMU\Model\bin\Release\EntityFramework.xml
+C:\Users\Nam Phuong\Documents\Visual Studio 2015\Projects\TDMU\Model\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Nam Phuong\Documents\Visual Studio 2015\Projects\TDMU\Model\obj\Release\Model.csprojResolveAssemblyReference.cache
+C:\Users\Nam Phuong\Documents\Visual Studio 2015\Projects\TDMU\Model\obj\Release\Model.dll
+C:\Users\Nam Phuong\Documents\Visual Studio 2015\Projects\TDMU\Model\obj\Release\Model.pdb
+C:\Users\SKYNET\Desktop\TDMU\Model\bin\Release\Model.dll.config
+C:\Users\SKYNET\Desktop\TDMU\Model\bin\Release\Model.dll
+C:\Users\SKYNET\Desktop\TDMU\Model\bin\Release\Model.pdb
+C:\Users\SKYNET\Desktop\TDMU\Model\bin\Release\EntityFramework.dll
+C:\Users\SKYNET\Desktop\TDMU\Model\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\SKYNET\Desktop\TDMU\Model\bin\Release\EntityFramework.xml
+C:\Users\SKYNET\Desktop\TDMU\Model\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\SKYNET\Desktop\TDMU\Model\obj\Release\Model.csprojResolveAssemblyReference.cache
+C:\Users\SKYNET\Desktop\TDMU\Model\obj\Release\Model.dll
+C:\Users\SKYNET\Desktop\TDMU\Model\obj\Release\Model.pdb
+D:\PS\WEBTRUONG\TDMU\TDMU\Model\bin\Release\Model.dll.config
+D:\PS\WEBTRUONG\TDMU\TDMU\Model\bin\Release\Model.dll
+D:\PS\WEBTRUONG\TDMU\TDMU\Model\bin\Release\Model.pdb
+D:\PS\WEBTRUONG\TDMU\TDMU\Model\bin\Release\EntityFramework.dll
+D:\PS\WEBTRUONG\TDMU\TDMU\Model\bin\Release\EntityFramework.SqlServer.dll
+D:\PS\WEBTRUONG\TDMU\TDMU\Model\bin\Release\EntityFramework.xml
+D:\PS\WEBTRUONG\TDMU\TDMU\Model\bin\Release\EntityFramework.SqlServer.xml
+D:\PS\WEBTRUONG\TDMU\TDMU\Model\obj\Release\Model.dll
+D:\PS\WEBTRUONG\TDMU\TDMU\Model\obj\Release\Model.pdb

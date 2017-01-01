@@ -1,0 +1,32 @@
+﻿@model List<Model.EF.Slide>
+
+<div class="tp-banner-container hidden-xs hidden-sm">
+    <div class="tp-banner">     
+        <ul>
+            @foreach (var item in Model)
+            {
+                var url = "/slide/" + item.Url + ".html";
+                <li data-transition="slidehorizontal" data-slotamount="4" data-masterspeed="700" data-saveperformance="off" data-title="Slide 1">
+                    <!-- MAIN IMAGE -->
+                    <img src="@item.ImageLoad" alt="citybg" data-lazyload="@item.Image" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                    <!-- LAYERS -->
+                    <div class="tp-caption fade"
+                         data-x="0"
+                         data-y="center"
+                         data-start="1000"
+                         data-speed="600"
+                         data-easing="Linear.easeNone">
+                        <div class="slide-caption">
+                            <h2>@item.Name</h2>
+                            <p>
+                                @item.Description
+                            </p>
+                            <a class="btn btn-border-white" href="@url">Read More</a>
+                        </div>
+                    </div>
+                </li>
+            }
+
+        </ul>
+    </div>
+</div>
