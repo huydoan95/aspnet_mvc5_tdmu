@@ -13,17 +13,17 @@
             @foreach (var item in Model)
             {
                 var url = "/news/" + item.Url + ".html";
-            <li>
-                <div class="news-slider-item">
+                <li>
+                    <div class="news-slider-item">
 
-                    <div class="n-img" style="background-image: url(@item.Image)"></div>
-                    <a href="@url">
-                        <div class="caption" style="color:white; font-size: 20px; width: 100%; height: auto; background: rgba(1, 1, 1, 0.45); padding:7px;">
-                            @item.Name
-                        </div>
-                    </a>
-                </div>
-            </li>
+                        <div class="n-img" style="background-image: url(@item.Image)"></div>
+                        <a href="@url">
+                            <div class="caption" style="color:white; font-size: 20px; width: 100%; height: auto; background: rgba(1, 1, 1, 0.45); padding:7px;">
+                                @item.Name
+                            </div>
+                        </a>
+                    </div>
+                </li>
             }
         </ul>
     </div>
@@ -36,21 +36,33 @@
                 {
                     var item = Model[i];
                     var url1 = "/news/" + item.Url + ".html";
-                <li>
-                    <div class="post post-sm post-hoz">
-                        <div class="post-img">
-                            <img src="@item.Image" alt="@item.Name" style="min-height:80px;" />
-                        </div>
+                    var name = "";
+                    if (item.Name.Count() > 80)
+                    {
+                        name = item.Name.Substring(0, 77) + "...";
+                    }
+                    else
+                    {
+                        name = item.Name;
+                    }
 
-                        <div class="post-info">
-                            @*<h4><a href="@url1" title="@item.Name" class="post-title">@item.Name</a></h4>*@
-                            <h4><a href="@url1" title="@item.Name">@item.Name</a></h4>
-                            <div class="post-tag">
-                                <span><i class="fa fa-calendar"></i> @item.Date <i class="fa fa-user"></i> @item.CreateBy </span>
+                    <li>
+
+
+                        <div class="post post-sm post-hoz">
+                            <div class="post-img">
+                                <img src="@item.Image" alt="@item.Name" style="min-height:80px;" />
+                            </div>
+
+                            <div class="post-info">
+                                @*<h4><a href="@url1" title="@item.Name" class="post-title">@item.Name</a></h4>*@
+                                <h4><a href="@url1" title="@item.Name">@name</a></h4>
+                                <div class="post-tag">
+                                    <span><i class="fa fa-calendar"></i> @item.Date <i class="fa fa-user"></i> @item.CreateBy </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </li>
+                    </li>
                 }
             </ul>
         </div>
@@ -64,6 +76,15 @@
                         {
                             var item = Model[i];
                             var url2 = "/news/" + item.Url + ".html";
+                            var name = "";
+                            if (item.Name.Count() > 80)
+                            {
+                                name = item.Name.Substring(0, 77) + "...";
+                            }
+                            else
+                            {
+                                name = item.Name;
+                            }
                             <li>
                                 <div class="post post-sm post-hoz">
                                     <div class="post-img">
@@ -72,7 +93,7 @@
 
                                     <div class="post-info">
                                         @*<h4><a href="@url2" title="@item.Name" class="post-title">@item.Name</a></h4>*@
-                                        <h4><a href="@url2" title="@item.Name">@item.Name</a></h4>
+                                        <h4><a href="@url2" title="@item.Name">@name</a></h4>
                                         <div class="post-tag">
                                             <span><i class="fa fa-calendar"></i> @item.Date <i class="fa fa-user"></i> @item.CreateBy </span>
                                         </div>

@@ -37,3 +37,13 @@ E:\Specialized documents\Website\ASP.NET\TDMU\Model\bin\Debug\EntityFramework.Sq
 E:\Specialized documents\Website\ASP.NET\TDMU\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 E:\Specialized documents\Website\ASP.NET\TDMU\Model\obj\Debug\Model.dll
 E:\Specialized documents\Website\ASP.NET\TDMU\Model\obj\Debug\Model.pdb
+E:\Specialized documents\Website\ASP.NET\aspnet_mvc5_tdmu\TDMU\Model\bin\Debug\Model.dll.config
+E:\Specialized documents\Website\ASP.NET\aspnet_mvc5_tdmu\TDMU\Model\bin\Debug\Model.dll
+E:\Specialized documents\Website\ASP.NET\aspnet_mvc5_tdmu\TDMU\Model\bin\Debug\Model.pdb
+E:\Specialized documents\Website\ASP.NET\aspnet_mvc5_tdmu\TDMU\Model\bin\Debug\EntityFramework.dll
+E:\Specialized documents\Website\ASP.NET\aspnet_mvc5_tdmu\TDMU\Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\Specialized documents\Website\ASP.NET\aspnet_mvc5_tdmu\TDMU\Model\bin\Debug\EntityFramework.xml
+E:\Specialized documents\Website\ASP.NET\aspnet_mvc5_tdmu\TDMU\Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\Specialized documents\Website\ASP.NET\aspnet_mvc5_tdmu\TDMU\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+E:\Specialized documents\Website\ASP.NET\aspnet_mvc5_tdmu\TDMU\Model\obj\Debug\Model.dll
+E:\Specialized documents\Website\ASP.NET\aspnet_mvc5_tdmu\TDMU\Model\obj\Debug\Model.pdb
